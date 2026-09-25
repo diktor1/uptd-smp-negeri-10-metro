@@ -1,0 +1,65 @@
+
+.container-lambang{
+  background:#DCE4EC;
+  padding:50px 15px;
+}
+.lambang{
+  margin-top:0;
+  padding:0 15px;
+}
+.lambang ul{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.lambang img{
+  width:15rem;
+}
+.lambang h2{
+  color:black;
+  font-size:19px;
+  font-family:'Saira', Sans-Serif;
+  font-weight:700;
+}
+.lambang li{
+  list-style:none;
+}
+.lambang h3{
+  background:#4073B5;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:18px;
+  margin-top:-10px;
+  font-family:'Saira', Sans-Serif;
+  font-weight:700;
+}
+.makna-isi{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  gap:2rem;
+  padding:20px;
+}
+.makna-isi li{
+  color:black;
+  font-family:'Roboto', Sans-Serif;
+  font-weight:450;
+  font-size:15px;
+  border:2px solid black;
+  border-radius:40px;
+  list-style:none;
+  padding:15px;
+  width:100%;
+  background:rgba(227, 180, 48, 0.8);
+  margin-top:20px;
+  box-shadow:0 5px 10px hwb(0 65% 35%);
+  transition:padding font-size border-radius 5s ease
+}
+.makna-isi li:active{
+  padding:22px;
+  font-size:18px;
+  border-radius:50px;
+  width:100%;
+}
