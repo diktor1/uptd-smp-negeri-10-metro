@@ -1,13 +1,17 @@
-
+main{
+  background:#DCE4EC;
+  margin-top:-20px;
+  padding:20px 15px;
+}
 .container-prestasi{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,    1fr));
-  gap:2rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px,    1fr));
+  gap:5px;
   margin:15px;
 }
 .card-prestasi{
   border:0.5px solid rgba(174,174,174,0.8);
-  padding:10px;
+  padding:5px;
   background:rgba(227, 180, 48, 0.9);
   backdrop-filter:blur(10px);
   cursor:pointer;
@@ -15,15 +19,26 @@
   transition: transform 0.3s ease;
 }
 .card-prestasi:hover{
-  transform: translateY(-10px) scale(1);
+  transform: translateY(-5px) scale(1.01);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.30);
   border:none;
 }
-.card-prestasi img{
+.gambar-prestasi{
   width:100%;
-  aspect-ratio:2/1;
-  object-fit:cover;
+  aspect-ratio:1/1;
   overflow:hidden;
+  border-radius:5px;
+  margin-bottom:10px;
+}
+.gambar-prestasi img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 0.3s ease;
+}
+.card-prestasi:hover img{
+  transform:scale(1.05);
 }
 .card-prestasi a{
   width:10%;

@@ -1,8 +1,12 @@
-
+.bg-eskul{
+  background:#DCE4EC;
+  margin-top:-20px;
+  padding:20px 15px;
+}
 .card-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px,    1fr));
-  gap:2rem;
+  gap:1rem;
   margin:15px;
 }
 .card-eskul{
@@ -31,12 +35,21 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.30);
   border:none;
 }
-.card-eskul img{
+.gambar-eskul{
   width:100%;
   aspect-ratio:2/1;
-  object-fit:cover;
   overflow:hidden;
   border-radius:5px;
+}
+.gambar-eskul img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+  height:100%;
+  transition:transform 0.3s ease;
+}
+.card-eskul:hover img{
+  transform:scale(1.05);
 }
 .card-eskul a{
   width:10%;
