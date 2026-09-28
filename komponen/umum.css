@@ -383,7 +383,7 @@ form{
   backdrop-filter:blur(10px);
   cursor:pointer;
   border-radius:5px;
-  border:1px solid #D2DDE9;
+  border:1px solid #D1D5DB;
   transition: transform 0.3s ease;
 }
 .card-berita .deskripsi-berita{
