@@ -744,10 +744,10 @@ footer .contact-us{
   margin-top:-5px;
 }
 footer .contact-us img{
-  width:30px;
-  height:30px;
+  width:35px;
+  height:35px;
   border:2px solid #DAE3ED;
-  border-radius:10px;
+  border-radius:5px;
   cursor:pointer;
 }
 footer .foter{
