@@ -9,11 +9,7 @@
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  background: linear-gradient(
-    180deg,
-    #245B91 60%,
-    #5a96bd
-  );
+  background:#245B91;
   height:200px;
   width:100%;
 }
@@ -29,7 +25,7 @@
 }
 .nav-btn{
   margin-top:-20px;
-  width:200px;
+  width:300px;
   padding:10px 0;
   z-index:200;
   background:white;
@@ -49,27 +45,28 @@
   color:#333;
   z-index:100;
   text-decoration: none;
+  cursor:pointer;
 }
 .nav-title a:hover{
   color:#245B91;
+  font-weight:700;
 }
   body { 
     background:#EEF2F7;
   }
-.body-loader{
-  position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-    animation: hilang 0.5s ease 1s forwards;
-}
+
+   .loading {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     z-index:2000;
+     position:fixed;
+     backdrop-filter:blur(20px);
+     animation: hilang 0.8s ease 1s forwards;
+    }
 @keyframes hilang {
     from {
         opacity: 1;
@@ -81,41 +78,67 @@
         pointer-events: none;
     }
 }
-.loader {
-  width: 50px;
-  aspect-ratio: 1;
-  display: grid;
-  border: 4px solid #0000;
-  border-radius: 50%;
-  border-color: #1e5aa8b3 #0000;
-  animation: l16 1s infinite linear;
-}
-.loader::before,
-.loader::after {    
-  content: "";
-  grid-area: 1/1;
-  margin: 2px;
-  border: inherit;
-  border-radius: 50%;
-}
-.loader::before {
-  border-color: #e3b430cc #0000;
-  animation: inherit; 
-  animation-duration: .5s;
-  animation-direction: reverse;
-}
-.loader::after {
-  margin: 8px;
-}
-@keyframes l16 { 
-  100%{transform: rotate(1turn)}
-}
+
+    .circle {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-top-color: #ffffff;
+      border-right-color: #2774e8;
+      border-bottom-color: #2774e8;
+      border-left-color: #ffffff;
+
+      animation: putar 1.5s linear infinite;
+    }
+
+
+    .circle::before {
+      content: "";
+      position: absolute;
+      inset: 20px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-top-color: #f5b51b;
+      border-left-color: #f5b51b;
+      animation: putarBalik 2s linear infinite;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      z-index: 2;
+  backdrop-filter: blur(1px);
+      border-radius:50%;
+      padding:5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes putar {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes putarBalik {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(-360deg);
+      }
+    }
 
   header {
     background:  rgba(30, 90, 168, 1); 
     position: sticky;
     top: 0;
-    z-index: 100000;
+    z-index: 1000;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -229,6 +252,7 @@
 
 .head-title{
   width:100%;
+  margin-bottom:5px;
   height:20px;
   padding:50px 0;
 }
@@ -255,17 +279,11 @@
     margin: 10px auto 0;
     transform: scaleX(0);
     transform-origin: center;
-    animation: garisMuncul 1s ease forwards;
+    animation: garisMuncul 3s ease forwards;
 }
 @keyframes garisMuncul {
     0% {
         transform: scaleX(0);
-    }
-    25% {
-        transform: scaleX(0.08);
-    }
-    50% {
-        transform: scaleX(0.35);
     }
     100% {
         transform: scaleX(1);
@@ -371,20 +389,28 @@ form{
   padding:20px 0;
 }
 .card-berita:hover{
-  transform: translateY(-10px) scale(1);
+  transform: translateY(-5px) scale(1.005);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.30);
   border:none;
 }
-.card-berita img{
+.gambar-berita{
   width:100%;
-  height: 200px;
-  object-fit:cover;
   overflow:hidden;
   aspect-ratio: 16 / 9;
+  border-radius:5px;
+}
+.gambar-berita img{
+  width:100%;
+  height: 100%;
+  object-fit:cover;
   display:block;
+  transition: transform 0.3s ease;
+}
+.card-berita:hover img{
+  transform:scale(1.05);
 }
 .card-berita a{
-  width:180px;
+  width:150px;
   overflow: hidden;
   margin-top:20px;
   height:35px;
@@ -438,6 +464,7 @@ form{
   align-items:center;
   text-align: center;
   padding:20px;
+  margin-top:20px;
 }
 .tombol-baca a{
   text-decoration:none;
@@ -657,7 +684,7 @@ footer .kotak-penutup{
   display:flex;
   border-top:2px solid black;
   width:100%;
-  background:linear-gradient(150deg, rgba(30, 90, 168, 0.85));
+  background:rgba(30, 90, 168, 1);
   flex-direction:column;
   text-align:center;
   gap:10px;
@@ -681,10 +708,10 @@ footer .kotak-penutup li{
 }
 footer .kotak-penutup a{
   text-decoration:none;
-  color:black;
+  color:#DAE3ED;
   font-family:'Google Sans', Sans-Serif;
-  font-weight:450;
-  font-size:16px;
+  font-weight:500;
+  font-size:15px;
   cursor:pointer;
   animation:transform 0.3s;
 }
@@ -695,19 +722,20 @@ footer .kotak-penutup a:hover{
   color:#ffc93c;
 }
 footer .kotak-penutup h2{
-  font-family:'Merriweather', serif;
   font-weight:900;
   font-size:20px;
+  color:#DAE3ED;
 }
 footer .kotak-penutup p{
-  font-family:'Google Sans', serif;
-  font-weight:450;
+  font-weight:300;
+  color:#DAE3ED;
+  font-size:15px;
 }
 footer .kotak-penutup h3{
-  font-family:'Merriweather', serif;
   font-weight:900;
-  font-size:18px;
+  font-size:20px;
   margin-top:20px;
+  color:#DAE3ED;
 }
 footer .contact-us{
   display:flex;
@@ -718,7 +746,7 @@ footer .contact-us{
 footer .contact-us img{
   width:30px;
   height:30px;
-  border:2px solid black;
+  border:2px solid #DAE3ED;
   border-radius:10px;
   cursor:pointer;
 }
@@ -736,7 +764,7 @@ footer .foter p{
   color:#CCCCCC;
   font-family:'Merriweather',Serif;
   font-weight:300;
-  font-size:10px;
+  font-size:9px;
 }
 .bg-form{
   background:#DCE4EC;
