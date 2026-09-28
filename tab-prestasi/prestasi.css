@@ -23,6 +23,11 @@ main{
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.30);
   border:1px solid black;
 }
+.txt-berita{
+  display:flex;
+  flex-direction: column;
+  text-align:center;
+}
 .gambar-prestasi{
   width:100%;
   aspect-ratio:1/1;
