@@ -383,6 +383,7 @@ form{
   backdrop-filter:blur(10px);
   cursor:pointer;
   border-radius:5px;
+  border:1px solid #D2DDE9;
   transition: transform 0.3s ease;
 }
 .card-berita .deskripsi-berita{
@@ -391,7 +392,7 @@ form{
 .card-berita:hover{
   transform: translateY(-5px) scale(1.005);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.30);
-  border:none;
+  border:1px solid black;
 }
 .gambar-berita{
   width:100%;
