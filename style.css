@@ -324,7 +324,7 @@ backdrop-filter: blur(5px);
 .card-eskul h3{
   font-family:'Roboto', serif;
   font-weight:600;
-  font-size:clamp(8px, 5cqw, 10px);
+  font-size:clamp(10px, 5cqw, 15px);
   margin:5px;
 }
 .card-eskul:hover{
