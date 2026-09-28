@@ -314,7 +314,7 @@ backdrop-filter: blur(5px);
   container-type: inline-size;
 }
 .card-eskul{
-  border:1px solid #e2e2e2;
+  border:1px solid #D1D5DB;
   background:rgba(227, 180, 48, 0.9);
   cursor:pointer;
   border-radius:5px;
@@ -330,7 +330,7 @@ backdrop-filter: blur(5px);
 .card-eskul:hover{
   transform:scale(5);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.30);
-  border:none;
+  border:1px solid black;
 }
 .gambar-eskul{
   width:100%;
