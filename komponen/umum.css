@@ -698,7 +698,7 @@ footer .kotak-penutup{
   flex-direction:column;
   text-align:center;
   align-items:center;
-  gap:10px;
+  gap:5px;
 }
 footer .kotak-penutup img{
   width:10rem;
