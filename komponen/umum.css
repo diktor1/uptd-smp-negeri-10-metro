@@ -688,7 +688,6 @@ footer .kotak-penutup{
   background:rgba(30, 90, 168, 1);
   flex-direction:column;
   text-align:center;
-  gap:5px;
   padding:20px 50px;
   align-items:center;
   z-index:0;
