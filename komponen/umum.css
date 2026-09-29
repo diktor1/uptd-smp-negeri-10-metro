@@ -708,7 +708,7 @@ footer .kotak-penutup ul{
   display:flex;
   flex-direction:column;
   text-align:center;
-  gap:10px;
+  gap:5px;
   margin-bottom:10px;
 }
 footer .kotak-penutup li{
