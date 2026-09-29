@@ -693,6 +693,12 @@ footer .kotak-penutup{
   align-items:center;
   z-index:0;
 }
+.head-footer{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+  align-items:center;
+}
 footer .kotak-penutup img{
   width:10rem;
   height:8rem;
