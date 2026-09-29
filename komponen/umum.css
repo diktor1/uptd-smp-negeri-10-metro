@@ -710,6 +710,9 @@ footer .kotak-penutup ul{
   text-align:center;
   margin-bottom:5px;
 }
+.link-terkait{
+  margin-bottom:10px;
+}
 footer .kotak-penutup li{
   list-style:none;
 }
