@@ -366,7 +366,7 @@ form{
   opacity: 1;
 }
 
-.btn-primary:active {
+.btn-primary:hover{
   transform: scale(0.9);
 }
 .card-container-berita{
@@ -455,7 +455,7 @@ form{
   opacity: 1;
 }
 
-.card-berita a:active {
+.card-berita a:hover {
   transform: scale(0.9);
 }
 
@@ -507,7 +507,7 @@ form{
   opacity: 1;
 }
 
-.tombol-baca a:active {
+.tombol-baca a:hover {
   transform: scale(0.9);
 }
 
@@ -572,7 +572,7 @@ form{
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.025);
   transition: transform 0.5s ease, box-shadow 0.3s ease;
 }
-.info-card:active{
+.info-card:hover{
   transform:translateY(-5px) scale(1.01);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
