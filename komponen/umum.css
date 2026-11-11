@@ -592,7 +592,7 @@ form{
   width:50px;
   padding:10px;
 }
-.info-card:active .info-icon {
+.info-card:hover .info-icon {
   border-radius:50px;
 }
 .info-card:hover{
