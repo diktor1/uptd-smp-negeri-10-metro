@@ -595,7 +595,7 @@ form{
 .info-card:active .info-icon {
   border-radius:50px;
 }
-.info-card:active{
+.info-card:hover{
   transform:translateY(-5px) scale(1.01);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
