@@ -218,7 +218,7 @@ backdrop-filter: blur(5px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
-.card-jumlah li:active{
+.card-jumlah li:hover{
   transform:translateY(-6px) scale(1.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
@@ -396,7 +396,7 @@ backdrop-filter: blur(5px);
   opacity: 1;
 }
 
-.tombol-baca-beranda a:active {
+.tombol-baca-beranda a:hover {
   transform: scale(0.9);
 }
 .berita h3{
